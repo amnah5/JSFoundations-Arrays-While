@@ -2,15 +2,24 @@
  * isArrayLengthOdd(numbers):
  * - receives array `numbers`
  * - returns true if array has an odd number of elements
- * - returns false otherwise
+ * - returns fal
+ * se otherwise
  *
  * e.g.
  * isArrayLengthOdd([1, 2, 3]) -> true
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
-function isArrayLengthOdd(numbers) {
+ function isArrayLengthOdd(numbers) {
   // Your code here
-}
+
+  return numbers.length % 2 ===1;
+
+    
+  }
+
+
+
+
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,6 +33,7 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  return numbers.length % 2 ===0;
 }
 
 /**
@@ -36,8 +46,11 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
-}
+    instructors.push("laila");
+  return instructors;
 
+}
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -48,6 +61,7 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+return teams.pop();
 }
 
 /**
@@ -62,7 +76,13 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
-}
+  if (fruits.length % 2 === 0){
+    return fruits.slice(fruits.length/2,fruits.length)
+  }else{
+return[]
+  }
+  }
+
 
 /**
  * youGottaCalmDown(shout):
@@ -80,8 +100,16 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
-}
 
+  const sliceIndex = shout.indexOf("!!");
+  if (sliceIndex < 0) {
+    return shout;
+  } else {
+    return shout.slice(0, sliceIndex + 1);
+  }
+}
+console.log(youGottaCalmDown("hello!!!!!!"))
+youGottaCalmDown("hello!!!!!!")
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
